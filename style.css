@@ -1582,3 +1582,31 @@ a.contact-card:hover {
     .timeline-marker { display: none; }
     .timeline-card { padding: 24px; }
 }
+
+/* ---------- Open to Work & Relocation ---------- */
+.open-to-work-badge {
+    background: rgba(82, 183, 136, 0.2) !important;
+    border: 1px solid rgba(82, 183, 136, 0.4) !important;
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(82, 183, 136, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(82, 183, 136, 0.4); }
+}
+
+.relocation-banner {
+    margin-top: 24px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, var(--primary-lightest), #e8f5e9);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: 15px;
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+
+.relocation-banner strong {
+    color: var(--primary);
+    font-size: 16px;
+}
