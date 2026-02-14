@@ -228,28 +228,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========== CONTACT FORM ==========
+    // ========== CONTACT FORM (FormSubmit.co AJAX) ==========
     const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const fd = new FormData(contactForm);
-            const name = fd.get('name');
-            const email = fd.get('email');
-            const subject = fd.get('subject');
-            const message = fd.get('message');
-
-            const mailtoSubject = encodeURIComponent(`[Portfolio] ${subject} - from ${name}`);
-            const mailtoBody = encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`
-            );
-            window.location.href = `mailto:kajalmi61@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-
             const btn = contactForm.querySelector('button[type="submit"]');
-            const orig = btn.innerHTML;
-            btn.innerHTML = '<span>Opening Email Client...</span>';
-            btn.style.background = '#52B788';
-            setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; contactForm.reset(); }, 3000);
+            const origHTML = btn.innerHTML;
+
+            // Show sending state
+            btn.disabled = true;
+            btn.innerHTML = '<span>Sending...</span>';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    formStatus.textContent = 'Message sent successfully! Kajal will get back to you soon.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = 'Something went wrong. Please try emailing directly at kajalmi61@gmail.com';
+                    formStatus.className = 'form-status error';
+                }
+            })
+            .catch(() => {
+                formStatus.textContent = 'Network error. Please try emailing directly at kajalmi61@gmail.com';
+                formStatus.className = 'form-status error';
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = origHTML;
+            });
         });
     }
 

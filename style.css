@@ -270,6 +270,28 @@ ul { list-style: none; }
 .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
 .btn-full { width: 100%; justify-content: center; }
 
+/* Form Status Messages */
+.form-status {
+    margin-top: 16px;
+    padding: 0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.form-status.success {
+    padding: 14px 20px;
+    background: var(--primary-lightest);
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-light);
+}
+.form-status.error {
+    padding: 14px 20px;
+    background: #FEF2F2;
+    color: #991B1B;
+    border: 1px solid #FECACA;
+}
+
 /* Hero Visual */
 .hero-visual {
     display: flex; justify-content: center; align-items: center;
