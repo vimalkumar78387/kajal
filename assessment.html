@@ -4,645 +4,643 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition Assessment | Dt. Kajal Mishra</title>
-    <meta name="description" content="Personalized Nutrition Assessment Form by Dt. Kajal Mishra - Clinical Dietitian & Nutrition Expert. Fill out to get your customized diet plan.">
+    <meta name="description" content="Personalized Nutrition Assessment by Dt. Kajal Mishra. Get your customized, result-oriented diet plan.">
+    <meta property="og:title" content="Nutrition Assessment | Dt. Kajal Mishra">
+    <meta property="og:description" content="Fill this quick assessment to get your personalized diet plan from Dt. Kajal Mishra.">
+    <meta property="og:image" content="kajal-profile.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>">
     <style>
-        /* ========== VARIABLES ========== */
-        :root {
-            --primary: #2D6A4F;
-            --primary-light: #52B788;
-            --primary-lighter: #95D5B2;
-            --primary-lightest: #D8F3DC;
-            --primary-dark: #1B4332;
-            --accent: #D4A574;
-            --accent-light: #E8C9A0;
-            --white: #FFFFFF;
-            --off-white: #FAFAF8;
-            --cream: #F5F2ED;
-            --gray-50: #F9FAFB;
-            --gray-100: #F3F4F6;
-            --gray-200: #E5E7EB;
-            --gray-300: #D1D5DB;
-            --gray-400: #9CA3AF;
-            --gray-500: #6B7280;
-            --gray-600: #4B5563;
-            --gray-700: #374151;
-            --gray-800: #1F2937;
-            --gray-900: #111827;
-            --font-heading: 'Playfair Display', Georgia, serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-accent: 'DM Sans', sans-serif;
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-            --radius-xl: 28px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
-            --shadow-xl: 0 24px 60px rgba(0,0,0,0.12);
-            --ease: cubic-bezier(0.4, 0, 0.2, 1);
-            --ease-out: cubic-bezier(0, 0, 0.2, 1);
-            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
+:root {
+    --primary: #2D6A4F;
+    --primary-light: #52B788;
+    --primary-lighter: #95D5B2;
+    --primary-lightest: #D8F3DC;
+    --primary-dark: #1B4332;
+    --accent: #D4A574;
+    --accent-light: #F0DCC8;
+    --white: #FFFFFF;
+    --bg: #F7F5F2;
+    --bg-warm: #FAF8F5;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    --danger: #EF4444;
+    --font-h: 'Playfair Display', Georgia, serif;
+    --font-b: 'Inter', -apple-system, sans-serif;
+    --font-a: 'DM Sans', sans-serif;
+    --r-sm: 10px;
+    --r-md: 14px;
+    --r-lg: 22px;
+    --r-xl: 30px;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
-        /* ========== RESET ========== */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--font-body);
-            color: var(--gray-800);
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 40%, #3A7D5C 100%);
-            min-height: 100vh; min-height: 100dvh;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-        input, select, textarea, button { font-family: inherit; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-b); color: var(--gray-800);
+    background: var(--bg);
+    min-height: 100vh; min-height: 100dvh;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+input, select, textarea, button { font-family: inherit; }
 
-        /* ========== TOP BAR ========== */
-        .topbar {
-            position: sticky; top: 0; z-index: 100;
-            background: rgba(27, 67, 50, 0.85);
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding: 14px 20px;
-        }
-        .topbar-inner {
-            max-width: 720px; margin: 0 auto;
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .topbar-brand {
-            display: flex; align-items: center; gap: 8px;
-            font-family: var(--font-heading); font-size: 18px; font-weight: 600; color: var(--white);
-        }
-        .topbar-brand span:first-child { font-size: 22px; }
-        .topbar-back {
-            font-family: var(--font-accent); font-size: 13px; font-weight: 500;
-            color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 4px;
-            transition: color 0.3s;
-        }
-        .topbar-back:hover { color: var(--white); }
+/* ========== LAYOUT ========== */
+.page-wrapper {
+    max-width: 600px; margin: 0 auto;
+    padding: 20px 16px 48px;
+}
 
-        /* ========== PROGRESS BAR ========== */
-        .progress-wrapper {
-            position: sticky; top: 53px; z-index: 99;
-            background: rgba(27, 67, 50, 0.7);
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            padding: 12px 20px 14px;
-        }
-        .progress-inner { max-width: 720px; margin: 0 auto; }
-        .progress-label {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 8px;
-        }
-        .progress-step {
-            font-family: var(--font-accent); font-size: 13px; font-weight: 600;
-            color: rgba(255,255,255,0.9); letter-spacing: 0.3px;
-        }
-        .progress-pct {
-            font-family: var(--font-accent); font-size: 12px; font-weight: 500;
-            color: rgba(255,255,255,0.5);
-        }
-        .progress-track {
-            height: 6px; background: rgba(255,255,255,0.15); border-radius: 50px; overflow: hidden;
-        }
-        .progress-fill {
-            height: 100%; border-radius: 50px;
-            background: linear-gradient(90deg, var(--primary-light), var(--accent-light));
-            transition: width 0.6s var(--ease);
-            width: 0%;
-        }
+/* ========== DIETITIAN HEADER ========== */
+.dt-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 6px 0 20px;
+}
+.dt-avatar {
+    width: 52px; height: 52px; border-radius: 50%; overflow: hidden;
+    border: 2.5px solid var(--primary-lighter);
+    flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(45,106,79,0.15);
+}
+.dt-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.dt-info h1 {
+    font-family: var(--font-h); font-size: 17px; font-weight: 600;
+    color: var(--gray-900); line-height: 1.2;
+}
+.dt-info p {
+    font-size: 12.5px; color: var(--gray-500); font-weight: 500;
+    margin-top: 1px;
+}
+.dt-header-back {
+    margin-left: auto; font-size: 12px; color: var(--gray-400);
+    font-weight: 500; display: flex; align-items: center; gap: 3px;
+    text-decoration: none; transition: color 0.2s;
+}
+.dt-header-back:hover { color: var(--primary); }
 
-        /* ========== MAIN CONTAINER ========== */
-        .form-container {
-            max-width: 720px; margin: 0 auto;
-            padding: 24px 16px 40px;
-        }
+/* ========== STEP INDICATOR ========== */
+.step-indicator {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; margin-bottom: 24px; padding: 0 12px;
+}
+.step-dot-wrap {
+    display: flex; flex-direction: column; align-items: center;
+    position: relative; z-index: 1;
+}
+.step-dot {
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-a); font-size: 14px; font-weight: 700;
+    border: 2.5px solid var(--gray-200); color: var(--gray-400);
+    background: var(--white);
+    transition: all 0.4s var(--ease);
+    position: relative;
+}
+.step-dot.active {
+    border-color: var(--primary); color: var(--white);
+    background: var(--primary);
+    box-shadow: 0 0 0 4px rgba(45,106,79,0.12), 0 2px 8px rgba(45,106,79,0.2);
+    transform: scale(1.08);
+}
+.step-dot.done {
+    border-color: var(--primary-light); background: var(--primary-light);
+    color: var(--white);
+}
+.step-dot .check-icon { display: none; }
+.step-dot.done .check-icon { display: block; }
+.step-dot.done .dot-num { display: none; }
+.step-dot-label {
+    font-size: 10px; font-weight: 600; color: var(--gray-400);
+    margin-top: 6px; text-align: center; white-space: nowrap;
+    letter-spacing: 0.3px; transition: color 0.3s;
+}
+.step-dot-wrap.is-active .step-dot-label,
+.step-dot-wrap.is-done .step-dot-label { color: var(--primary); }
+.step-line {
+    flex: 1; height: 2.5px; background: var(--gray-200);
+    margin: 0 -2px; margin-bottom: 18px;
+    transition: background 0.5s var(--ease);
+    min-width: 28px;
+}
+.step-line.done { background: var(--primary-light); }
 
-        /* ========== INTRO CARD ========== */
-        .intro-card {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: var(--radius-lg); padding: 20px 24px;
-            margin-bottom: 24px; text-align: center;
-            color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.7;
-        }
-        .intro-card strong { color: var(--white); }
+/* ========== FORM CARD ========== */
+.form-card {
+    background: var(--white);
+    border-radius: var(--r-xl); padding: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+}
 
-        /* ========== STEP CARD ========== */
-        .step {
-            background: var(--white); border-radius: var(--radius-xl);
-            padding: 32px 28px 28px; box-shadow: var(--shadow-xl);
-            display: none;
-            animation: stepIn 0.4s var(--ease-out);
-        }
-        .step.active { display: block; }
+/* Card top accent bar */
+.card-accent {
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--accent));
+}
 
-        @keyframes stepIn {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.card-body { padding: 32px 28px 28px; }
 
-        .step-title {
-            font-family: var(--font-heading); font-size: 24px; font-weight: 600;
-            color: var(--gray-900); margin-bottom: 4px;
-        }
-        .step-subtitle {
-            font-size: 14px; color: var(--gray-400); margin-bottom: 28px;
-        }
+/* ========== STEP CONTENT ========== */
+.step { display: none; }
+.step.active { display: block; animation: fadeSlideUp 0.35s var(--ease-out); }
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        /* ========== FIELD GROUPS ========== */
-        .field-group {
-            margin-bottom: 22px;
-        }
-        .field-group:last-child { margin-bottom: 0; }
-        .field-group label {
-            display: block; font-size: 13px; font-weight: 600;
-            color: var(--gray-700); margin-bottom: 8px;
-            letter-spacing: 0.2px;
-        }
-        .field-group label .req { color: #EF4444; margin-left: 2px; }
+.step-header { margin-bottom: 28px; }
+.step-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+.step-title {
+    font-family: var(--font-h); font-size: 23px; font-weight: 600;
+    color: var(--gray-900); line-height: 1.2; margin-bottom: 5px;
+}
+.step-sub {
+    font-size: 14px; color: var(--gray-400); font-weight: 400;
+}
 
-        /* Section divider inside a step */
-        .section-divider {
-            display: flex; align-items: center; gap: 12px;
-            margin: 28px 0 22px; padding-top: 4px;
-        }
-        .section-divider .divider-icon { font-size: 20px; }
-        .section-divider .divider-text {
-            font-family: var(--font-accent); font-size: 12px; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 2px; color: var(--primary);
-        }
-        .section-divider::after {
-            content: ''; flex: 1; height: 1px;
-            background: linear-gradient(to right, var(--primary-lighter), transparent);
-        }
+/* ========== FIELD GROUPS ========== */
+.fg { margin-bottom: 20px; }
+.fg:last-of-type { margin-bottom: 0; }
+.fg-label {
+    display: block; font-size: 13.5px; font-weight: 600;
+    color: var(--gray-700); margin-bottom: 8px; line-height: 1.3;
+}
+.fg-label .req { color: var(--danger); margin-left: 1px; }
+.fg-hint {
+    font-size: 11.5px; color: var(--gray-400); margin-top: 4px; font-weight: 400;
+}
 
-        /* ========== TEXT INPUTS ========== */
-        .text-input, .select-input, .textarea-input {
-            width: 100%; padding: 13px 16px;
-            border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm);
-            font-size: 15px; color: var(--gray-800); background: var(--white);
-            transition: all 0.3s var(--ease); outline: none;
-            -webkit-appearance: none;
-        }
-        .text-input:focus, .select-input:focus, .textarea-input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(45,106,79,0.1);
-        }
-        .text-input::placeholder, .textarea-input::placeholder { color: var(--gray-300); }
-        .textarea-input { resize: vertical; min-height: 64px; line-height: 1.6; }
-        .input-row {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-        }
+/* Row layout */
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-        /* ========== PILL SELECTORS ========== */
-        .pills {
-            display: flex; flex-wrap: wrap; gap: 8px;
-        }
-        .pill {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 10px 18px; border-radius: 50px;
-            border: 1.5px solid var(--gray-200); background: var(--white);
-            font-size: 14px; font-weight: 500; color: var(--gray-600);
-            cursor: pointer; transition: all 0.25s var(--ease);
-            user-select: none; -webkit-user-select: none;
-        }
-        .pill:hover { border-color: var(--primary-lighter); color: var(--gray-700); }
-        .pill.selected {
-            border-color: var(--primary); background: var(--primary-lightest);
-            color: var(--primary-dark); font-weight: 600;
-        }
-        .pill.selected::before {
-            content: '✓'; font-size: 12px; font-weight: 700; color: var(--primary);
-        }
-        .pill input { display: none; }
+/* ========== TEXT INPUTS ========== */
+.fi {
+    width: 100%; padding: 13px 16px;
+    border: 1.5px solid var(--gray-200); border-radius: var(--r-sm);
+    font-size: 15px; color: var(--gray-800); background: var(--bg-warm);
+    transition: all 0.25s var(--ease); outline: none;
+    -webkit-appearance: none;
+}
+.fi:focus {
+    border-color: var(--primary); background: var(--white);
+    box-shadow: 0 0 0 3px rgba(45,106,79,0.08);
+}
+.fi::placeholder { color: var(--gray-300); font-weight: 400; }
+textarea.fi { resize: vertical; min-height: 60px; line-height: 1.6; }
 
-        /* Single-select pills (radio style) — no checkmark */
-        .pills-radio .pill.selected::before { display: none; }
+/* ========== PILLS (single select) ========== */
+.pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 11px 20px; border-radius: 50px;
+    border: 1.5px solid var(--gray-200); background: var(--bg-warm);
+    font-size: 13.5px; font-weight: 500; color: var(--gray-600);
+    cursor: pointer; transition: all 0.2s var(--ease);
+    user-select: none; -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.pill:active { transform: scale(0.97); }
+.pill.sel {
+    border-color: var(--primary); background: var(--primary);
+    color: var(--white); font-weight: 600;
+    box-shadow: 0 2px 8px rgba(45,106,79,0.2);
+}
+.pill .pill-emoji { font-size: 16px; line-height: 1; }
+.pill input { display: none; }
 
-        /* ========== CHIP SELECTORS (multi-select) ========== */
-        .chips {
-            display: flex; flex-wrap: wrap; gap: 8px;
-        }
-        .chip {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 9px 16px; border-radius: var(--radius-sm);
-            border: 1.5px solid var(--gray-200); background: var(--gray-50);
-            font-size: 13px; font-weight: 500; color: var(--gray-600);
-            cursor: pointer; transition: all 0.25s var(--ease);
-            user-select: none; -webkit-user-select: none;
-        }
-        .chip:hover { border-color: var(--primary-lighter); }
-        .chip.selected {
-            border-color: var(--primary); background: var(--primary-lightest);
-            color: var(--primary-dark); font-weight: 600;
-        }
-        .chip .chip-icon { font-size: 15px; }
-        .chip input { display: none; }
+/* ========== CHIPS (multi select) ========== */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 16px; border-radius: var(--r-sm);
+    border: 1.5px solid var(--gray-200); background: var(--bg-warm);
+    font-size: 13px; font-weight: 500; color: var(--gray-600);
+    cursor: pointer; transition: all 0.2s var(--ease);
+    user-select: none; -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.chip:active { transform: scale(0.97); }
+.chip .chip-em { font-size: 15px; line-height: 1; }
+.chip.sel {
+    border-color: var(--primary); background: var(--primary-lightest);
+    color: var(--primary-dark); font-weight: 600;
+}
+.chip.sel::after {
+    content: ''; display: inline-block; width: 14px; height: 14px;
+    background: var(--primary); border-radius: 50%; margin-left: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 6l2 2 4-4' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: 12px; background-repeat: no-repeat; background-position: center;
+}
+.chip input { display: none; }
 
-        /* ========== EMOJI SCALE ========== */
-        .emoji-scale {
-            display: flex; align-items: center; justify-content: space-between;
-            gap: 4px; padding: 4px 0;
-        }
-        .emoji-scale-labels {
-            display: flex; justify-content: space-between;
-            margin-top: 6px;
-        }
-        .emoji-scale-labels span {
-            font-size: 11px; color: var(--gray-400); font-weight: 500;
-        }
-        .emoji-btn {
-            flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
-            padding: 10px 4px; border-radius: var(--radius-md);
-            border: 2px solid transparent; background: var(--gray-50);
-            cursor: pointer; transition: all 0.25s var(--ease-spring);
-        }
-        .emoji-btn:hover { background: var(--gray-100); transform: scale(1.05); }
-        .emoji-btn .emoji { font-size: 28px; transition: transform 0.3s var(--ease-spring); }
-        .emoji-btn .emoji-label { font-size: 10px; color: var(--gray-400); font-weight: 500; white-space: nowrap; }
-        .emoji-btn.selected {
-            border-color: var(--primary); background: var(--primary-lightest);
-            transform: scale(1.08);
-        }
-        .emoji-btn.selected .emoji { transform: scale(1.15); }
-        .emoji-btn.selected .emoji-label { color: var(--primary); font-weight: 600; }
-        .emoji-btn input { display: none; }
+/* ========== EMOJI SCALE ========== */
+.escale { display: flex; gap: 6px; }
+.escale-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px;
+    padding: 12px 4px 10px; border-radius: var(--r-md);
+    border: 2px solid transparent; background: var(--bg-warm);
+    cursor: pointer; transition: all 0.2s var(--spring);
+    -webkit-tap-highlight-color: transparent;
+}
+.escale-btn:active { transform: scale(0.95); }
+.escale-btn .em { font-size: 30px; transition: transform 0.3s var(--spring); }
+.escale-btn .em-label {
+    font-size: 10px; font-weight: 600; color: var(--gray-400);
+    text-align: center; line-height: 1.2; letter-spacing: 0.2px;
+}
+.escale-btn.sel {
+    border-color: var(--primary); background: var(--primary-lightest);
+    transform: scale(1.06);
+    box-shadow: 0 2px 10px rgba(45,106,79,0.12);
+}
+.escale-btn.sel .em { transform: scale(1.1); }
+.escale-btn.sel .em-label { color: var(--primary-dark); }
+.escale-btn input { display: none; }
 
-        /* ========== TOGGLE ========== */
-        .toggle-group {
-            display: flex; gap: 8px;
-        }
-        .toggle-btn {
-            flex: 1; text-align: center; padding: 12px 16px;
-            border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm);
-            font-size: 14px; font-weight: 500; color: var(--gray-500);
-            cursor: pointer; transition: all 0.25s var(--ease);
-            background: var(--white);
-        }
-        .toggle-btn:hover { border-color: var(--primary-lighter); }
-        .toggle-btn.selected {
-            border-color: var(--primary); background: var(--primary-lightest);
-            color: var(--primary-dark); font-weight: 600;
-        }
-        .toggle-btn input { display: none; }
+/* ========== SECTION DIVIDER ========== */
+.sdiv {
+    display: flex; align-items: center; gap: 10px;
+    margin: 28px 0 20px;
+}
+.sdiv-icon { font-size: 18px; }
+.sdiv-text {
+    font-family: var(--font-a); font-size: 11.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.8px; color: var(--primary);
+}
+.sdiv::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--primary-lightest), transparent);
+}
 
-        /* ========== CONDITIONAL SECTION ========== */
-        .conditional-section {
-            max-height: 0; overflow: hidden; opacity: 0;
-            transition: max-height 0.5s var(--ease), opacity 0.4s var(--ease), margin 0.4s var(--ease);
-            margin-top: 0;
-        }
-        .conditional-section.visible {
-            max-height: 800px; opacity: 1; margin-top: 4px;
-        }
+/* ========== CONDITIONAL SECTION ========== */
+.cond {
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: max-height 0.5s var(--ease), opacity 0.4s var(--ease);
+}
+.cond.vis { max-height: 900px; opacity: 1; }
 
-        /* ========== FILE UPLOAD ========== */
-        .file-upload-zone {
-            border: 2px dashed var(--gray-200); border-radius: var(--radius-md);
-            padding: 24px; text-align: center; cursor: pointer;
-            transition: all 0.3s var(--ease); position: relative;
-        }
-        .file-upload-zone:hover { border-color: var(--primary-lighter); background: var(--gray-50); }
-        .file-upload-zone.has-file { border-color: var(--primary); background: var(--primary-lightest); }
-        .file-upload-zone input[type="file"] {
-            position: absolute; inset: 0; opacity: 0; cursor: pointer;
-        }
-        .file-upload-icon { font-size: 32px; margin-bottom: 8px; }
-        .file-upload-text { font-size: 13px; color: var(--gray-500); }
-        .file-upload-text strong { color: var(--primary); }
-        .file-upload-hint { font-size: 11px; color: var(--gray-400); margin-top: 4px; }
-        .file-name { font-size: 13px; color: var(--primary-dark); font-weight: 600; margin-top: 8px; }
+/* ========== FILE UPLOAD ========== */
+.file-zone {
+    border: 2px dashed var(--gray-200); border-radius: var(--r-md);
+    padding: 20px; text-align: center; cursor: pointer;
+    transition: all 0.25s var(--ease); position: relative;
+    background: var(--bg-warm);
+}
+.file-zone:hover { border-color: var(--primary-lighter); }
+.file-zone.has { border-color: var(--primary); background: var(--primary-lightest); border-style: solid; }
+.file-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.file-zone-icon { font-size: 28px; margin-bottom: 6px; }
+.file-zone-text { font-size: 13px; color: var(--gray-500); }
+.file-zone-text strong { color: var(--primary); }
+.file-zone-hint { font-size: 11px; color: var(--gray-400); margin-top: 3px; }
+.file-zone .fname { font-size: 13px; color: var(--primary-dark); font-weight: 600; margin-top: 6px; }
 
-        /* ========== NAVIGATION BUTTONS ========== */
-        .step-nav {
-            display: flex; gap: 12px; margin-top: 32px; padding-top: 24px;
-            border-top: 1px solid var(--gray-100);
-        }
-        .btn-back {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 14px 24px; border-radius: 50px;
-            font-family: var(--font-accent); font-size: 14px; font-weight: 600;
-            color: var(--gray-500); background: var(--gray-50);
-            border: 1.5px solid var(--gray-200); cursor: pointer;
-            transition: all 0.3s var(--ease);
-        }
-        .btn-back:hover { background: var(--gray-100); color: var(--gray-700); }
-        .btn-next {
-            flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            padding: 14px 28px; border-radius: 50px;
-            font-family: var(--font-accent); font-size: 15px; font-weight: 600;
-            color: var(--white); background: var(--primary);
-            border: none; cursor: pointer;
-            transition: all 0.35s var(--ease);
-        }
-        .btn-next:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,106,79,0.3); }
-        .btn-next:disabled { opacity: 0.5; pointer-events: none; }
-        .btn-next svg { transition: transform 0.3s; }
-        .btn-next:hover svg { transform: translateX(3px); }
-        .btn-submit {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-        }
-        .btn-submit:hover { box-shadow: 0 8px 30px rgba(45,106,79,0.35); }
+/* ========== NAV BUTTONS ========== */
+.step-nav {
+    display: flex; gap: 10px; margin-top: 32px;
+    padding-top: 24px; border-top: 1px solid var(--gray-100);
+}
+.btn-b {
+    display: flex; align-items: center; gap: 5px;
+    padding: 13px 20px; border-radius: 50px;
+    font-family: var(--font-a); font-size: 13.5px; font-weight: 600;
+    color: var(--gray-500); background: var(--gray-100);
+    border: none; cursor: pointer; transition: all 0.2s var(--ease);
+}
+.btn-b:hover { background: var(--gray-200); color: var(--gray-700); }
+.btn-n {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 15px 28px; border-radius: 50px;
+    font-family: var(--font-a); font-size: 15px; font-weight: 600;
+    color: var(--white); border: none; cursor: pointer;
+    background: var(--primary);
+    transition: all 0.25s var(--ease);
+    box-shadow: 0 2px 8px rgba(45,106,79,0.2);
+}
+.btn-n:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(45,106,79,0.3); }
+.btn-n:active { transform: scale(0.98); }
+.btn-n svg { transition: transform 0.2s; }
+.btn-n:hover svg { transform: translateX(2px); }
+.btn-submit { background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+.btn-n.loading { opacity: 0.6; pointer-events: none; }
+.spinner {
+    display: inline-block; width: 18px; height: 18px;
+    border: 2.5px solid rgba(255,255,255,0.3);
+    border-top-color: var(--white); border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ========== VALIDATION ========== */
-        .field-group.error .text-input,
-        .field-group.error .textarea-input,
-        .field-group.error .select-input {
-            border-color: #EF4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
-        }
-        .field-group.error label { color: #EF4444; }
-        .error-msg {
-            font-size: 12px; color: #EF4444; margin-top: 4px; display: none;
-        }
-        .field-group.error .error-msg { display: block; }
+/* ========== VALIDATION ========== */
+.fg.err .fi, .fg.err textarea.fi { border-color: var(--danger); box-shadow: 0 0 0 3px rgba(239,68,68,0.08); }
+.fg.err .fg-label { color: var(--danger); }
+.fg .err-msg { font-size: 11.5px; color: var(--danger); margin-top: 4px; display: none; }
+.fg.err .err-msg { display: block; }
+.fg.err .pills, .fg.err .chips, .fg.err .escale {
+    outline: 2px solid rgba(239,68,68,0.2); outline-offset: 4px; border-radius: 8px;
+}
 
-        /* ========== SUCCESS SCREEN ========== */
-        .success-screen {
-            display: none; text-align: center;
-            background: var(--white); border-radius: var(--radius-xl);
-            padding: 48px 32px; box-shadow: var(--shadow-xl);
-            animation: stepIn 0.5s var(--ease-out);
-        }
-        .success-screen.active { display: block; }
-        .success-check {
-            width: 80px; height: 80px; border-radius: 50%;
-            background: var(--primary-lightest); display: flex;
-            align-items: center; justify-content: center;
-            margin: 0 auto 24px; font-size: 40px;
-            animation: scaleIn 0.5s 0.2s var(--ease-spring) both;
-        }
-        @keyframes scaleIn {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
-        }
-        .success-screen h2 {
-            font-family: var(--font-heading); font-size: 28px;
-            color: var(--gray-900); margin-bottom: 12px;
-        }
-        .success-screen .success-name { color: var(--primary); }
-        .success-screen p { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin-bottom: 8px; }
-        .success-whatsapp {
-            display: inline-flex; align-items: center; gap: 8px;
-            margin-top: 20px; padding: 12px 24px; border-radius: 50px;
-            background: #25D366; color: var(--white);
-            font-family: var(--font-accent); font-size: 14px; font-weight: 600;
-            transition: all 0.3s var(--ease);
-        }
-        .success-whatsapp:hover { background: #1DA851; transform: translateY(-2px); }
-        .success-back {
-            display: inline-flex; align-items: center; gap: 6px;
-            margin-top: 16px; padding: 10px 20px; border-radius: 50px;
-            font-size: 13px; color: var(--gray-400); font-weight: 500;
-            transition: color 0.3s;
-        }
-        .success-back:hover { color: var(--primary); }
+/* ========== SUCCESS ========== */
+.success {
+    display: none; text-align: center;
+    animation: fadeSlideUp 0.5s var(--ease-out);
+}
+.success.active { display: block; }
+.success-inner {
+    background: var(--white); border-radius: var(--r-xl);
+    padding: 48px 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+}
+.success-check {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-lightest), #E8F5E9);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px; font-size: 36px;
+    animation: popIn 0.5s 0.15s var(--spring) both;
+}
+@keyframes popIn { from { transform: scale(0); } to { transform: scale(1); } }
+.success h2 {
+    font-family: var(--font-h); font-size: 26px; color: var(--gray-900);
+    margin-bottom: 10px; line-height: 1.3;
+}
+.success .sname { color: var(--primary); }
+.success p { font-size: 14.5px; color: var(--gray-500); line-height: 1.7; margin-bottom: 6px; }
+.success-wa {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 20px; padding: 13px 28px; border-radius: 50px;
+    background: #25D366; color: var(--white); text-decoration: none;
+    font-family: var(--font-a); font-size: 14px; font-weight: 600;
+    transition: all 0.25s var(--ease);
+    box-shadow: 0 2px 8px rgba(37,211,102,0.3);
+}
+.success-wa:hover { background: #1DA851; transform: translateY(-1px); }
+.success-link {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-top: 14px; font-size: 13px; color: var(--gray-400);
+    text-decoration: none; font-weight: 500; transition: color 0.2s;
+}
+.success-link:hover { color: var(--primary); }
 
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 640px) {
-            .form-container { padding: 16px 12px 32px; }
-            .step { padding: 24px 20px 22px; border-radius: var(--radius-lg); }
-            .step-title { font-size: 21px; }
-            .input-row { grid-template-columns: 1fr; }
-            .emoji-btn .emoji { font-size: 24px; }
-            .emoji-btn { padding: 8px 2px; }
-            .emoji-btn .emoji-label { font-size: 9px; }
-            .pill { padding: 9px 14px; font-size: 13px; }
-            .chip { padding: 8px 12px; font-size: 12px; }
-            .intro-card { padding: 16px 18px; font-size: 13px; }
-            .success-screen { padding: 36px 24px; }
-            .success-screen h2 { font-size: 24px; }
-            .btn-back { padding: 12px 18px; font-size: 13px; }
-            .btn-next { padding: 13px 22px; font-size: 14px; }
-        }
-        @media (max-width: 380px) {
-            .emoji-btn .emoji-label { display: none; }
-            .topbar-brand { font-size: 16px; }
-            .pill { padding: 8px 12px; font-size: 12px; }
-        }
-
-        /* ========== REDUCED MOTION ========== */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
-
-        /* ========== LOADING STATE ========== */
-        .btn-next.loading {
-            pointer-events: none; opacity: 0.7;
-        }
-        .spinner {
-            display: inline-block; width: 18px; height: 18px;
-            border: 2.5px solid rgba(255,255,255,0.3);
-            border-top-color: var(--white); border-radius: 50%;
-            animation: spin 0.6s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+    .page-wrapper { padding: 14px 12px 40px; }
+    .card-body { padding: 26px 20px 24px; }
+    .step-title { font-size: 20px; }
+    .row { grid-template-columns: 1fr; }
+    .escale-btn .em { font-size: 26px; }
+    .escale-btn { padding: 10px 2px 8px; }
+    .step-dot { width: 34px; height: 34px; font-size: 13px; }
+    .step-dot-label { font-size: 9px; }
+    .pill { padding: 10px 16px; font-size: 13px; }
+    .chip { padding: 9px 13px; font-size: 12px; }
+    .success-inner { padding: 36px 22px; }
+    .success h2 { font-size: 22px; }
+    .dt-avatar { width: 44px; height: 44px; }
+    .dt-info h1 { font-size: 15px; }
+}
+@media (max-width: 360px) {
+    .escale { gap: 4px; }
+    .escale-btn .em-label { display: none; }
+    .step-line { min-width: 20px; }
+    .pill { padding: 9px 13px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="topbar">
-        <div class="topbar-inner">
-            <div class="topbar-brand">
-                <span>&#x1F33F;</span>
-                <span>Kajal<span style="color:var(--primary-light)">Mishra</span></span>
+<div class="page-wrapper">
+
+    <!-- Dietitian Header -->
+    <div class="dt-header">
+        <div class="dt-avatar">
+            <img src="kajal-profile.jpg" alt="Dt. Kajal Mishra">
+        </div>
+        <div class="dt-info">
+            <h1>Dt. Kajal Mishra</h1>
+            <p>Clinical Dietitian &amp; Nutrition Expert</p>
+        </div>
+        <a href="index.html" class="dt-header-back">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Portfolio
+        </a>
+    </div>
+
+    <!-- Step Indicator -->
+    <div class="step-indicator" id="stepIndicator">
+        <div class="step-dot-wrap is-active" data-si="1">
+            <div class="step-dot active">
+                <span class="dot-num">1</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
             </div>
-            <a href="index.html" class="topbar-back">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-                Portfolio
-            </a>
+            <span class="step-dot-label">About</span>
+        </div>
+        <div class="step-line" data-sl="1"></div>
+        <div class="step-dot-wrap" data-si="2">
+            <div class="step-dot">
+                <span class="dot-num">2</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="step-dot-label">Health</span>
+        </div>
+        <div class="step-line" data-sl="2"></div>
+        <div class="step-dot-wrap" data-si="3">
+            <div class="step-dot">
+                <span class="dot-num">3</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="step-dot-label">Lifestyle</span>
+        </div>
+        <div class="step-line" data-sl="3"></div>
+        <div class="step-dot-wrap" data-si="4">
+            <div class="step-dot">
+                <span class="dot-num">4</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="step-dot-label">Diet</span>
         </div>
     </div>
 
-    <!-- Progress Bar -->
-    <div class="progress-wrapper">
-        <div class="progress-inner">
-            <div class="progress-label">
-                <span class="progress-step" id="progressStep">Step 1 of 4 &mdash; About You</span>
-                <span class="progress-pct" id="progressPct">0%</span>
-            </div>
-            <div class="progress-track">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-        </div>
-    </div>
+    <!-- Form Card -->
+    <div class="form-card">
+        <div class="card-accent"></div>
+        <div class="card-body">
 
-    <!-- Form Container -->
-    <div class="form-container">
-
-        <div class="intro-card" id="introCard">
-            <strong>&#x1F33F; Personalized Nutrition Assessment</strong><br>
-            Fill this quick form to help Dt. Kajal create a <strong>fully customized, result-oriented diet plan</strong> for you. Takes about 3 minutes.
-        </div>
-
-        <form id="assessmentForm" action="https://formsubmit.co/ajax/kajalmi61@gmail.com" method="POST" enctype="multipart/form-data">
-            <!-- FormSubmit config -->
+        <form id="aForm" action="https://formsubmit.co/ajax/kajalmi61@gmail.com" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="New Nutrition Assessment Submission">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="_honey" style="display:none">
 
-            <!-- ==================== STEP 1: About You ==================== -->
-            <div class="step active" id="step1" data-step="1">
-                <h2 class="step-title">About You</h2>
-                <p class="step-subtitle">Basic details to get started</p>
+            <!-- ========== STEP 1 ========== -->
+            <div class="step active" id="s1">
+                <div class="step-header">
+                    <span class="step-icon">&#x1F44B;</span>
+                    <h2 class="step-title">Let's get to know you</h2>
+                    <p class="step-sub">Quick basics to personalize your plan</p>
+                </div>
 
-                <div class="input-row">
-                    <div class="field-group" data-required="text">
-                        <label>Full Name <span class="req">*</span></label>
-                        <input type="text" name="Full Name" class="text-input" placeholder="Your full name" autocomplete="name">
-                        <div class="error-msg">Please enter your name</div>
+                <div class="row">
+                    <div class="fg" data-req="text">
+                        <label class="fg-label">Full Name <span class="req">*</span></label>
+                        <input type="text" name="Full Name" class="fi" placeholder="Your full name" autocomplete="name">
+                        <div class="err-msg">Please enter your name</div>
                     </div>
-                    <div class="field-group" data-required="email">
-                        <label>Email <span class="req">*</span></label>
-                        <input type="email" name="Email" class="text-input" placeholder="your@email.com" autocomplete="email">
-                        <div class="error-msg">Please enter a valid email</div>
+                    <div class="fg" data-req="email">
+                        <label class="fg-label">Email <span class="req">*</span></label>
+                        <input type="email" name="Email" class="fi" placeholder="your@email.com" autocomplete="email">
+                        <div class="err-msg">Please enter a valid email</div>
                     </div>
                 </div>
 
-                <div class="input-row">
-                    <div class="field-group" data-required="text">
-                        <label>Contact Number <span class="req">*</span></label>
-                        <input type="tel" name="Contact Number" class="text-input" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
-                        <div class="error-msg">Please enter your phone number</div>
+                <div class="row">
+                    <div class="fg" data-req="text">
+                        <label class="fg-label">Contact Number <span class="req">*</span></label>
+                        <input type="tel" name="Contact Number" class="fi" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+                        <div class="err-msg">Please enter your number</div>
                     </div>
-                    <div class="field-group" data-required="text">
-                        <label>Age <span class="req">*</span></label>
-                        <input type="number" name="Age" class="text-input" placeholder="e.g., 28" min="10" max="100" inputmode="numeric">
-                        <div class="error-msg">Please enter your age</div>
+                    <div class="fg" data-req="text">
+                        <label class="fg-label">Age <span class="req">*</span></label>
+                        <input type="number" name="Age" class="fi" placeholder="e.g., 28" min="10" max="100" inputmode="numeric">
+                        <div class="err-msg">Please enter your age</div>
                     </div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Gender <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Gender">
-                        <label class="pill" data-value="Male"><input type="radio" name="Gender" value="Male">Male</label>
-                        <label class="pill" data-value="Female"><input type="radio" name="Gender" value="Female">Female</label>
-                        <label class="pill" data-value="Other"><input type="radio" name="Gender" value="Other">Other</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Gender <span class="req">*</span></label>
+                    <div class="pills" data-name="Gender" data-mode="single">
+                        <label class="pill"><input type="radio" name="Gender" value="Male"><span class="pill-emoji">&#x1F468;</span> Male</label>
+                        <label class="pill"><input type="radio" name="Gender" value="Female"><span class="pill-emoji">&#x1F469;</span> Female</label>
+                        <label class="pill"><input type="radio" name="Gender" value="Other"> Other</label>
                     </div>
-                    <div class="error-msg">Please select your gender</div>
+                    <div class="err-msg">Please select your gender</div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Occupation <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Occupation">
-                        <label class="pill" data-value="Working"><input type="radio" name="Occupation" value="Working">&#x1F4BC; Working</label>
-                        <label class="pill" data-value="Non-working"><input type="radio" name="Occupation" value="Non-working">&#x1F3E0; Non-working</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Occupation <span class="req">*</span></label>
+                    <div class="pills" data-name="Occupation" data-mode="single">
+                        <label class="pill"><input type="radio" name="Occupation" value="Working"><span class="pill-emoji">&#x1F4BC;</span> Working</label>
+                        <label class="pill"><input type="radio" name="Occupation" value="Non-working"><span class="pill-emoji">&#x1F3E0;</span> Non-working</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
                 <div class="step-nav">
-                    <button type="button" class="btn-next" onclick="nextStep(1)">
+                    <button type="button" class="btn-n" onclick="go(2)">
                         <span>Continue</span>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- ==================== STEP 2: Your Health ==================== -->
-            <div class="step" id="step2" data-step="2">
-                <h2 class="step-title">Your Health</h2>
-                <p class="step-subtitle">Help me understand your health profile</p>
-
-                <div class="field-group" data-required="chips">
-                    <label>What are your health goals? <span class="req">*</span></label>
-                    <div class="chips" data-name="Health Goals">
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="Weight Loss"><span class="chip-icon">&#x2696;&#xFE0F;</span> Weight Loss</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="PCOD/PCOS"><span class="chip-icon">&#x1F49C;</span> PCOD/PCOS</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="Diabetes"><span class="chip-icon">&#x1F489;</span> Diabetes</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="Gut Health"><span class="chip-icon">&#x1F33F;</span> Gut Health</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="Thyroid"><span class="chip-icon">&#x1F9AC;</span> Thyroid</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="Muscle Gain"><span class="chip-icon">&#x1F4AA;</span> Muscle Gain</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="General Fitness"><span class="chip-icon">&#x1F3C3;</span> General Fitness</label>
-                        <label class="chip"><input type="checkbox" name="Health Goals" value="Hormone Balance"><span class="chip-icon">&#x2696;&#xFE0F;</span> Hormone Balance</label>
-                    </div>
-                    <div class="error-msg">Please select at least one goal</div>
+            <!-- ========== STEP 2 ========== -->
+            <div class="step" id="s2">
+                <div class="step-header">
+                    <span class="step-icon">&#x1FA7A;</span>
+                    <h2 class="step-title">Tell me about your health</h2>
+                    <p class="step-sub">This helps me design the right approach for you</p>
                 </div>
 
-                <div class="field-group" data-required="chips">
-                    <label>Any diagnosed medical conditions? <span class="req">*</span></label>
-                    <div class="chips" data-name="Medical Conditions" data-has-none="true">
+                <div class="fg" data-req="chips">
+                    <label class="fg-label">What are your health goals? <span class="req">*</span></label>
+                    <div class="chips" data-name="Health Goals">
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="Weight Loss"><span class="chip-em">&#x2696;&#xFE0F;</span> Weight Loss</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="PCOD/PCOS"><span class="chip-em">&#x1F49C;</span> PCOD/PCOS</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="Diabetes"><span class="chip-em">&#x1F489;</span> Diabetes</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="Gut Health"><span class="chip-em">&#x1F33F;</span> Gut Health</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="Thyroid"><span class="chip-em">&#x1F98B;</span> Thyroid</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="Muscle Gain"><span class="chip-em">&#x1F4AA;</span> Muscle Gain</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="General Fitness"><span class="chip-em">&#x1F3C3;</span> General Fitness</label>
+                        <label class="chip"><input type="checkbox" name="Health Goals" value="Hormone Balance"><span class="chip-em">&#x2728;</span> Hormone Balance</label>
+                    </div>
+                    <div class="err-msg">Select at least one goal</div>
+                </div>
+
+                <div class="fg" data-req="chips">
+                    <label class="fg-label">Diagnosed medical conditions? <span class="req">*</span></label>
+                    <div class="chips" data-name="Medical Conditions" data-has-none="1">
                         <label class="chip"><input type="checkbox" name="Medical Conditions" value="Diabetes"> Diabetes</label>
                         <label class="chip"><input type="checkbox" name="Medical Conditions" value="Thyroid"> Thyroid</label>
                         <label class="chip"><input type="checkbox" name="Medical Conditions" value="PCOD/PCOS"> PCOD/PCOS</label>
                         <label class="chip"><input type="checkbox" name="Medical Conditions" value="Cholesterol"> Cholesterol</label>
-                        <label class="chip"><input type="checkbox" name="Medical Conditions" value="Hypertension/Hypotension"> BP Issues</label>
-                        <label class="chip" data-none="true"><input type="checkbox" name="Medical Conditions" value="None"> None</label>
+                        <label class="chip"><input type="checkbox" name="Medical Conditions" value="BP Issues"> BP Issues</label>
+                        <label class="chip" data-none="1"><input type="checkbox" name="Medical Conditions" value="None">&#x2705; None</label>
                     </div>
-                    <div class="error-msg">Please select at least one</div>
+                    <div class="err-msg">Select at least one</div>
                 </div>
 
-                <div class="field-group">
-                    <label>Current medications</label>
-                    <input type="text" name="Medications" class="text-input" placeholder="e.g., Metformin 500mg, Thyronorm — or None">
+                <div class="fg">
+                    <label class="fg-label">Current medications</label>
+                    <input type="text" name="Medications" class="fi" placeholder="e.g., Metformin, Thyronorm &mdash; or None">
                 </div>
 
-                <div class="section-divider">
-                    <span class="divider-icon">&#x1F33F;</span>
-                    <span class="divider-text">Gut Health</span>
-                </div>
+                <div class="sdiv"><span class="sdiv-icon">&#x1F33F;</span><span class="sdiv-text">Gut Health</span></div>
 
-                <div class="field-group" data-required="chips">
-                    <label>Do you experience any of these? <span class="req">*</span></label>
-                    <div class="chips" data-name="Gut Symptoms" data-has-none="true">
+                <div class="fg" data-req="chips">
+                    <label class="fg-label">Do you experience? <span class="req">*</span></label>
+                    <div class="chips" data-name="Gut Symptoms" data-has-none="1">
                         <label class="chip"><input type="checkbox" name="Gut Symptoms" value="Bloating"> Bloating</label>
                         <label class="chip"><input type="checkbox" name="Gut Symptoms" value="Constipation"> Constipation</label>
                         <label class="chip"><input type="checkbox" name="Gut Symptoms" value="Acidity"> Acidity</label>
                         <label class="chip"><input type="checkbox" name="Gut Symptoms" value="Gas"> Gas</label>
-                        <label class="chip" data-none="true"><input type="checkbox" name="Gut Symptoms" value="None"> None</label>
+                        <label class="chip" data-none="1"><input type="checkbox" name="Gut Symptoms" value="None">&#x2705; None</label>
                     </div>
-                    <div class="error-msg">Please select at least one</div>
+                    <div class="err-msg">Select at least one</div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Bowel movement frequency <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Bowel Frequency">
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Bowel movement frequency <span class="req">*</span></label>
+                    <div class="pills" data-name="Bowel Frequency" data-mode="single">
                         <label class="pill"><input type="radio" name="Bowel Frequency" value="Daily"> Daily</label>
                         <label class="pill"><input type="radio" name="Bowel Frequency" value="Alternate Days"> Alternate Days</label>
                         <label class="pill"><input type="radio" name="Bowel Frequency" value="Irregular"> Irregular</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <!-- Conditional: Hormonal Health (Females) -->
-                <div class="conditional-section" id="hormonalSection">
-                    <div class="section-divider">
-                        <span class="divider-icon">&#x1F49C;</span>
-                        <span class="divider-text">Hormonal Health</span>
-                    </div>
+                <!-- Conditional: Hormonal (Female) -->
+                <div class="cond" id="hormSec">
+                    <div class="sdiv"><span class="sdiv-icon">&#x1F49C;</span><span class="sdiv-text">Hormonal Health</span></div>
 
-                    <div class="field-group" data-required-if-female="pills">
-                        <label>Are your periods regular? <span class="req">*</span></label>
-                        <div class="pills pills-radio" data-name="Periods Regular">
+                    <div class="fg" data-reqf="pills">
+                        <label class="fg-label">Are your periods regular? <span class="req">*</span></label>
+                        <div class="pills" data-name="Periods Regular" data-mode="single">
                             <label class="pill"><input type="radio" name="Periods Regular" value="Yes"> Yes</label>
                             <label class="pill"><input type="radio" name="Periods Regular" value="No"> No</label>
                         </div>
-                        <div class="error-msg">Please select one</div>
+                        <div class="err-msg">Please select one</div>
                     </div>
 
-                    <div class="input-row">
-                        <div class="field-group" data-required-if-female="text">
-                            <label>Last Menstrual Period <span class="req">*</span></label>
-                            <input type="date" name="Last Menstrual Period" class="text-input">
-                            <div class="error-msg">Please enter the date</div>
+                    <div class="row">
+                        <div class="fg" data-reqf="text">
+                            <label class="fg-label">Last Menstrual Period <span class="req">*</span></label>
+                            <input type="date" name="Last Menstrual Period" class="fi">
+                            <div class="err-msg">Please enter date</div>
                         </div>
-                        <div class="field-group" data-required-if-female="text">
-                            <label>Cycle Length <span class="req">*</span></label>
-                            <input type="text" name="Cycle Length" class="text-input" placeholder="e.g., 28 days">
-                            <div class="error-msg">Please enter cycle length</div>
+                        <div class="fg" data-reqf="text">
+                            <label class="fg-label">Cycle Length <span class="req">*</span></label>
+                            <input type="text" name="Cycle Length" class="fi" placeholder="e.g., 28 days">
+                            <div class="err-msg">Please enter length</div>
                         </div>
                     </div>
 
-                    <div class="field-group" data-required-if-female="chips">
-                        <label>Do you experience: <span class="req">*</span></label>
+                    <div class="fg" data-reqf="chips">
+                        <label class="fg-label">Symptoms you experience <span class="req">*</span></label>
                         <div class="chips" data-name="Hormonal Symptoms">
                             <label class="chip"><input type="checkbox" name="Hormonal Symptoms" value="Cramps"> Cramps</label>
                             <label class="chip"><input type="checkbox" name="Hormonal Symptoms" value="Mood Swings"> Mood Swings</label>
@@ -650,584 +648,496 @@
                             <label class="chip"><input type="checkbox" name="Hormonal Symptoms" value="Clots"> Clots</label>
                             <label class="chip"><input type="checkbox" name="Hormonal Symptoms" value="Heavy Flow"> Heavy Flow</label>
                         </div>
-                        <div class="error-msg">Please select at least one</div>
+                        <div class="err-msg">Select at least one</div>
                     </div>
                 </div>
 
                 <div class="step-nav">
-                    <button type="button" class="btn-back" onclick="prevStep(2)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                    <button type="button" class="btn-b" onclick="go(1)">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
                         Back
                     </button>
-                    <button type="button" class="btn-next" onclick="nextStep(2)">
+                    <button type="button" class="btn-n" onclick="go(3)">
                         <span>Continue</span>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- ==================== STEP 3: Your Lifestyle ==================== -->
-            <div class="step" id="step3" data-step="3">
-                <h2 class="step-title">Your Lifestyle</h2>
-                <p class="step-subtitle">Your daily habits and routine</p>
+            <!-- ========== STEP 3 ========== -->
+            <div class="step" id="s3">
+                <div class="step-header">
+                    <span class="step-icon">&#x1F31F;</span>
+                    <h2 class="step-title">Your daily lifestyle</h2>
+                    <p class="step-sub">Understanding your routine helps optimize your plan</p>
+                </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Average sleep duration <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Sleep Duration">
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Average sleep duration <span class="req">*</span></label>
+                    <div class="pills" data-name="Sleep Duration" data-mode="single">
                         <label class="pill"><input type="radio" name="Sleep Duration" value="< 5 hours"> &lt; 5 hrs</label>
                         <label class="pill"><input type="radio" name="Sleep Duration" value="5-6 hours"> 5-6 hrs</label>
                         <label class="pill"><input type="radio" name="Sleep Duration" value="6-7 hours"> 6-7 hrs</label>
                         <label class="pill"><input type="radio" name="Sleep Duration" value="7-8 hours"> 7-8 hrs</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <div class="field-group" data-required="emoji">
-                    <label>Sleep quality <span class="req">*</span></label>
-                    <div class="emoji-scale" data-name="Sleep Quality">
-                        <label class="emoji-btn"><input type="radio" name="Sleep Quality" value="1 - Very Poor"><span class="emoji">&#x1F62B;</span><span class="emoji-label">Very Poor</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Sleep Quality" value="2 - Poor"><span class="emoji">&#x1F615;</span><span class="emoji-label">Poor</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Sleep Quality" value="3 - Average"><span class="emoji">&#x1F610;</span><span class="emoji-label">Average</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Sleep Quality" value="4 - Good"><span class="emoji">&#x1F642;</span><span class="emoji-label">Good</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Sleep Quality" value="5 - Excellent"><span class="emoji">&#x1F634;</span><span class="emoji-label">Excellent</span></label>
+                <div class="fg" data-req="emoji">
+                    <label class="fg-label">Sleep quality <span class="req">*</span></label>
+                    <div class="escale" data-name="Sleep Quality">
+                        <label class="escale-btn"><input type="radio" name="Sleep Quality" value="1 - Very Poor"><span class="em">&#x1F62B;</span><span class="em-label">Very Poor</span></label>
+                        <label class="escale-btn"><input type="radio" name="Sleep Quality" value="2 - Poor"><span class="em">&#x1F615;</span><span class="em-label">Poor</span></label>
+                        <label class="escale-btn"><input type="radio" name="Sleep Quality" value="3 - Okay"><span class="em">&#x1F610;</span><span class="em-label">Okay</span></label>
+                        <label class="escale-btn"><input type="radio" name="Sleep Quality" value="4 - Good"><span class="em">&#x1F60A;</span><span class="em-label">Good</span></label>
+                        <label class="escale-btn"><input type="radio" name="Sleep Quality" value="5 - Excellent"><span class="em">&#x1F634;</span><span class="em-label">Excellent</span></label>
                     </div>
-                    <div class="error-msg">Please rate your sleep quality</div>
+                    <div class="err-msg">Please rate your sleep</div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Wake up feeling refreshed? <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Wake Refreshed">
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Wake up feeling refreshed? <span class="req">*</span></label>
+                    <div class="pills" data-name="Wake Refreshed" data-mode="single">
                         <label class="pill"><input type="radio" name="Wake Refreshed" value="Yes"> Yes</label>
                         <label class="pill"><input type="radio" name="Wake Refreshed" value="Sometimes"> Sometimes</label>
                         <label class="pill"><input type="radio" name="Wake Refreshed" value="No"> No</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <div class="section-divider">
-                    <span class="divider-icon">&#x26A1;</span>
-                    <span class="divider-text">Energy & Mood</span>
-                </div>
+                <div class="sdiv"><span class="sdiv-icon">&#x26A1;</span><span class="sdiv-text">Energy & Mood</span></div>
 
-                <div class="field-group" data-required="emoji">
-                    <label>Daily energy levels <span class="req">*</span></label>
-                    <div class="emoji-scale" data-name="Energy Levels">
-                        <label class="emoji-btn"><input type="radio" name="Energy Levels" value="1 - Very Low"><span class="emoji">&#x1FAB6;</span><span class="emoji-label">Very Low</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Energy Levels" value="2 - Low"><span class="emoji">&#x1F615;</span><span class="emoji-label">Low</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Energy Levels" value="3 - Moderate"><span class="emoji">&#x1F610;</span><span class="emoji-label">Moderate</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Energy Levels" value="4 - Good"><span class="emoji">&#x26A1;</span><span class="emoji-label">Good</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Energy Levels" value="5 - High"><span class="emoji">&#x1F525;</span><span class="emoji-label">High</span></label>
+                <div class="fg" data-req="emoji">
+                    <label class="fg-label">Daily energy levels <span class="req">*</span></label>
+                    <div class="escale" data-name="Energy Levels">
+                        <label class="escale-btn"><input type="radio" name="Energy Levels" value="1 - Very Low"><span class="em">&#x1F62A;</span><span class="em-label">Very Low</span></label>
+                        <label class="escale-btn"><input type="radio" name="Energy Levels" value="2 - Low"><span class="em">&#x1F615;</span><span class="em-label">Low</span></label>
+                        <label class="escale-btn"><input type="radio" name="Energy Levels" value="3 - Moderate"><span class="em">&#x1F610;</span><span class="em-label">Moderate</span></label>
+                        <label class="escale-btn"><input type="radio" name="Energy Levels" value="4 - Good"><span class="em">&#x26A1;</span><span class="em-label">Good</span></label>
+                        <label class="escale-btn"><input type="radio" name="Energy Levels" value="5 - High"><span class="em">&#x1F525;</span><span class="em-label">High</span></label>
                     </div>
-                    <div class="error-msg">Please rate your energy levels</div>
+                    <div class="err-msg">Please rate your energy</div>
                 </div>
 
-                <div class="field-group" data-required="emoji">
-                    <label>Stress levels <span class="req">*</span></label>
-                    <div class="emoji-scale" data-name="Stress Levels">
-                        <label class="emoji-btn"><input type="radio" name="Stress Levels" value="1 - Very Low"><span class="emoji">&#x1F60C;</span><span class="emoji-label">Chill</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Stress Levels" value="2 - Low"><span class="emoji">&#x1F642;</span><span class="emoji-label">Low</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Stress Levels" value="3 - Moderate"><span class="emoji">&#x1F610;</span><span class="emoji-label">Moderate</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Stress Levels" value="4 - High"><span class="emoji">&#x1F630;</span><span class="emoji-label">High</span></label>
-                        <label class="emoji-btn"><input type="radio" name="Stress Levels" value="5 - Very High"><span class="emoji">&#x1F92F;</span><span class="emoji-label">Very High</span></label>
+                <div class="fg" data-req="emoji">
+                    <label class="fg-label">Stress levels <span class="req">*</span></label>
+                    <div class="escale" data-name="Stress Levels">
+                        <label class="escale-btn"><input type="radio" name="Stress Levels" value="1 - Very Low"><span class="em">&#x1F60C;</span><span class="em-label">Chill</span></label>
+                        <label class="escale-btn"><input type="radio" name="Stress Levels" value="2 - Low"><span class="em">&#x1F642;</span><span class="em-label">Low</span></label>
+                        <label class="escale-btn"><input type="radio" name="Stress Levels" value="3 - Moderate"><span class="em">&#x1F610;</span><span class="em-label">Moderate</span></label>
+                        <label class="escale-btn"><input type="radio" name="Stress Levels" value="4 - High"><span class="em">&#x1F630;</span><span class="em-label">High</span></label>
+                        <label class="escale-btn"><input type="radio" name="Stress Levels" value="5 - Very High"><span class="em">&#x1F92F;</span><span class="em-label">Extreme</span></label>
                     </div>
-                    <div class="error-msg">Please rate your stress levels</div>
+                    <div class="err-msg">Please rate your stress</div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Emotional eating habits <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Emotional Eating">
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Emotional eating habits <span class="req">*</span></label>
+                    <div class="pills" data-name="Emotional Eating" data-mode="single">
                         <label class="pill"><input type="radio" name="Emotional Eating" value="Rarely"> Rarely</label>
                         <label class="pill"><input type="radio" name="Emotional Eating" value="Sometimes"> Sometimes</label>
                         <label class="pill"><input type="radio" name="Emotional Eating" value="Often"> Often</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <div class="section-divider">
-                    <span class="divider-icon">&#x23F0;</span>
-                    <span class="divider-text">Routine & Diet Basics</span>
-                </div>
+                <div class="sdiv"><span class="sdiv-icon">&#x23F0;</span><span class="sdiv-text">Routine & Diet Basics</span></div>
 
-                <div class="input-row">
-                    <div class="field-group" data-required="text">
-                        <label>Wake up time <span class="req">*</span></label>
-                        <input type="time" name="Wake Up Time" class="text-input">
-                        <div class="error-msg">Please enter your wake time</div>
+                <div class="row">
+                    <div class="fg" data-req="text">
+                        <label class="fg-label">Wake up time <span class="req">*</span></label>
+                        <input type="time" name="Wake Up Time" class="fi">
+                        <div class="err-msg">Required</div>
                     </div>
-                    <div class="field-group" data-required="text">
-                        <label>Sleep time <span class="req">*</span></label>
-                        <input type="time" name="Sleep Time" class="text-input">
-                        <div class="error-msg">Please enter your sleep time</div>
+                    <div class="fg" data-req="text">
+                        <label class="fg-label">Sleep time <span class="req">*</span></label>
+                        <input type="time" name="Sleep Time" class="fi">
+                        <div class="err-msg">Required</div>
                     </div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Food preference <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Food Preference">
-                        <label class="pill"><input type="radio" name="Food Preference" value="Vegetarian">&#x1F966; Vegetarian</label>
-                        <label class="pill"><input type="radio" name="Food Preference" value="Eggetarian">&#x1F95A; Eggetarian</label>
-                        <label class="pill"><input type="radio" name="Food Preference" value="Non-Vegetarian">&#x1F357; Non-Veg</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Food preference <span class="req">*</span></label>
+                    <div class="pills" data-name="Food Preference" data-mode="single">
+                        <label class="pill"><input type="radio" name="Food Preference" value="Vegetarian"><span class="pill-emoji">&#x1F966;</span> Vegetarian</label>
+                        <label class="pill"><input type="radio" name="Food Preference" value="Eggetarian"><span class="pill-emoji">&#x1F95A;</span> Eggetarian</label>
+                        <label class="pill"><input type="radio" name="Food Preference" value="Non-Vegetarian"><span class="pill-emoji">&#x1F357;</span> Non-Veg</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <div class="field-group">
-                    <label>Food allergies / dislikes</label>
-                    <input type="text" name="Food Allergies" class="text-input" placeholder="e.g., Mushroom, Brinjal, Dairy... or None">
+                <div class="fg">
+                    <label class="fg-label">Food allergies / dislikes</label>
+                    <input type="text" name="Food Allergies" class="fi" placeholder="e.g., Mushroom, Brinjal, Dairy... or None">
                 </div>
 
-                <div class="input-row">
-                    <div class="field-group" data-required="pills">
-                        <label>Meals per day <span class="req">*</span></label>
-                        <div class="pills pills-radio" data-name="Meals Per Day">
+                <div class="row">
+                    <div class="fg" data-req="pills">
+                        <label class="fg-label">Meals/day <span class="req">*</span></label>
+                        <div class="pills" data-name="Meals Per Day" data-mode="single">
                             <label class="pill"><input type="radio" name="Meals Per Day" value="2">2</label>
                             <label class="pill"><input type="radio" name="Meals Per Day" value="3">3</label>
                             <label class="pill"><input type="radio" name="Meals Per Day" value="4">4</label>
                             <label class="pill"><input type="radio" name="Meals Per Day" value="5+">5+</label>
                         </div>
-                        <div class="error-msg">Please select</div>
+                        <div class="err-msg">Select</div>
                     </div>
-                    <div class="field-group" data-required="pills">
-                        <label>Skip meals? <span class="req">*</span></label>
-                        <div class="pills pills-radio" data-name="Skip Meals">
+                    <div class="fg" data-req="pills">
+                        <label class="fg-label">Skip meals? <span class="req">*</span></label>
+                        <div class="pills" data-name="Skip Meals" data-mode="single">
                             <label class="pill"><input type="radio" name="Skip Meals" value="Yes"> Yes</label>
                             <label class="pill"><input type="radio" name="Skip Meals" value="No"> No</label>
                         </div>
-                        <div class="error-msg">Please select</div>
+                        <div class="err-msg">Select</div>
                     </div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Daily water intake <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Water Intake">
-                        <label class="pill"><input type="radio" name="Water Intake" value="< 1L"> &lt; 1L</label>
-                        <label class="pill"><input type="radio" name="Water Intake" value="1-2L"> 1-2L</label>
-                        <label class="pill"><input type="radio" name="Water Intake" value="2-3L"> 2-3L</label>
-                        <label class="pill"><input type="radio" name="Water Intake" value="3L+"> 3L+</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Daily water intake <span class="req">*</span></label>
+                    <div class="pills" data-name="Water Intake" data-mode="single">
+                        <label class="pill"><input type="radio" name="Water Intake" value="< 1L"><span class="pill-emoji">&#x1F4A7;</span> &lt; 1L</label>
+                        <label class="pill"><input type="radio" name="Water Intake" value="1-2L"><span class="pill-emoji">&#x1F4A7;</span> 1-2L</label>
+                        <label class="pill"><input type="radio" name="Water Intake" value="2-3L"><span class="pill-emoji">&#x1F4A6;</span> 2-3L</label>
+                        <label class="pill"><input type="radio" name="Water Intake" value="3L+"><span class="pill-emoji">&#x1F30A;</span> 3L+</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Select one</div>
                 </div>
 
                 <div class="step-nav">
-                    <button type="button" class="btn-back" onclick="prevStep(3)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                    <button type="button" class="btn-b" onclick="go(2)">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
                         Back
                     </button>
-                    <button type="button" class="btn-next" onclick="nextStep(3)">
-                        <span>Continue</span>
+                    <button type="button" class="btn-n" onclick="go(4)">
+                        <span>Almost done!</span>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- ==================== STEP 4: Diet & Wrap Up ==================== -->
-            <div class="step" id="step4" data-step="4">
-                <h2 class="step-title">Diet & Final Details</h2>
-                <p class="step-subtitle">Last step &mdash; you're almost done!</p>
-
-                <div class="field-group" data-required="textarea">
-                    <label>Breakfast preferences <span class="req">*</span></label>
-                    <textarea name="Breakfast Preferences" class="textarea-input" rows="2" placeholder="e.g., Poha, Upma, Paratha, Oats, Idli, Smoothie..."></textarea>
-                    <div class="error-msg">Please share your preferences</div>
+            <!-- ========== STEP 4 ========== -->
+            <div class="step" id="s4">
+                <div class="step-header">
+                    <span class="step-icon">&#x1F37D;&#xFE0F;</span>
+                    <h2 class="step-title">Your diet & final details</h2>
+                    <p class="step-sub">Last step &mdash; tell me what you enjoy eating</p>
                 </div>
 
-                <div class="field-group" data-required="textarea">
-                    <label>Lunch preferences <span class="req">*</span></label>
-                    <textarea name="Lunch Preferences" class="textarea-input" rows="2" placeholder="e.g., Roti-sabzi, Rice-dal, Salad, Curd rice..."></textarea>
-                    <div class="error-msg">Please share your preferences</div>
+                <div class="fg" data-req="textarea">
+                    <label class="fg-label">Breakfast preferences <span class="req">*</span></label>
+                    <textarea name="Breakfast Preferences" class="fi" rows="2" placeholder="e.g., Poha, Upma, Paratha, Oats, Idli, Smoothie..."></textarea>
+                    <div class="err-msg">Please share your preferences</div>
+                </div>
+                <div class="fg" data-req="textarea">
+                    <label class="fg-label">Lunch preferences <span class="req">*</span></label>
+                    <textarea name="Lunch Preferences" class="fi" rows="2" placeholder="e.g., Roti-sabzi, Rice-dal, Salad, Curd rice..."></textarea>
+                    <div class="err-msg">Please share your preferences</div>
+                </div>
+                <div class="fg" data-req="textarea">
+                    <label class="fg-label">Snack preferences <span class="req">*</span></label>
+                    <textarea name="Snack Preferences" class="fi" rows="2" placeholder="e.g., Fruits, Makhana, Chai-biscuit, Sprouts..."></textarea>
+                    <div class="err-msg">Please share your preferences</div>
+                </div>
+                <div class="fg" data-req="textarea">
+                    <label class="fg-label">Dinner preferences <span class="req">*</span></label>
+                    <textarea name="Dinner Preferences" class="fi" rows="2" placeholder="e.g., Light khichdi, Roti-sabzi, Soup, Salad..."></textarea>
+                    <div class="err-msg">Please share your preferences</div>
                 </div>
 
-                <div class="field-group" data-required="textarea">
-                    <label>Snack preferences <span class="req">*</span></label>
-                    <textarea name="Snack Preferences" class="textarea-input" rows="2" placeholder="e.g., Fruits, Makhana, Chai-biscuit, Sprouts..."></textarea>
-                    <div class="error-msg">Please share your preferences</div>
+                <div class="sdiv"><span class="sdiv-icon">&#x1F48A;</span><span class="sdiv-text">Supplements & Reports</span></div>
+
+                <div class="fg">
+                    <label class="fg-label">Current supplements</label>
+                    <input type="text" name="Supplements" class="fi" placeholder="e.g., Vitamin D, B12, Iron, Probiotics &mdash; or None">
                 </div>
 
-                <div class="field-group" data-required="textarea">
-                    <label>Dinner preferences <span class="req">*</span></label>
-                    <textarea name="Dinner Preferences" class="textarea-input" rows="2" placeholder="e.g., Light khichdi, Roti-sabzi, Soup, Salad..."></textarea>
-                    <div class="error-msg">Please share your preferences</div>
-                </div>
-
-                <div class="section-divider">
-                    <span class="divider-icon">&#x1F48A;</span>
-                    <span class="divider-text">Supplements & Reports</span>
-                </div>
-
-                <div class="field-group">
-                    <label>Are you taking any supplements?</label>
-                    <input type="text" name="Supplements" class="text-input" placeholder="e.g., Vitamin D, B12, Iron, Probiotics — or None">
-                </div>
-
-                <div class="field-group">
-                    <label>Upload recent reports <span style="font-weight:400;color:var(--gray-400)">(optional)</span></label>
-                    <div class="file-upload-zone" id="fileZone">
-                        <input type="file" name="attachment" id="fileInput" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
-                        <div class="file-upload-icon">&#x1F4CB;</div>
-                        <div class="file-upload-text">Tap to upload or <strong>choose file</strong></div>
-                        <div class="file-upload-hint">PDF, JPG, PNG (max 5MB) &bull; You can also share later via WhatsApp</div>
-                        <div class="file-name" id="fileName"></div>
+                <div class="fg">
+                    <label class="fg-label">Upload recent reports <span style="font-weight:400;color:var(--gray-400);font-size:11.5px">(optional &mdash; share via WhatsApp too)</span></label>
+                    <div class="file-zone" id="fZone">
+                        <input type="file" name="attachment" id="fInput" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                        <div class="file-zone-icon">&#x1F4CB;</div>
+                        <div class="file-zone-text">Tap to <strong>choose file</strong></div>
+                        <div class="file-zone-hint">PDF, JPG, PNG &bull; Max 5MB</div>
+                        <div class="fname" id="fName"></div>
                     </div>
                 </div>
 
-                <div class="field-group">
-                    <label>Anything else you'd like me to know?</label>
-                    <textarea name="Additional Notes" class="textarea-input" rows="2" placeholder="Past diet attempts, specific concerns, questions..."></textarea>
+                <div class="fg">
+                    <label class="fg-label">Anything else you'd like me to know?</label>
+                    <textarea name="Additional Notes" class="fi" rows="2" placeholder="Past diet attempts, concerns, questions..."></textarea>
                 </div>
 
-                <div class="section-divider">
-                    <span class="divider-icon">&#x2705;</span>
-                    <span class="divider-text">Commitment</span>
-                </div>
+                <div class="sdiv"><span class="sdiv-icon">&#x1F91D;</span><span class="sdiv-text">Commitment</span></div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Are you ready to follow a structured diet plan? <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Ready For Plan">
-                        <label class="pill"><input type="radio" name="Ready For Plan" value="Yes!"> Yes!</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Ready for a structured diet plan? <span class="req">*</span></label>
+                    <div class="pills" data-name="Ready For Plan" data-mode="single">
+                        <label class="pill"><input type="radio" name="Ready For Plan" value="Yes!"><span class="pill-emoji">&#x1F4AA;</span> Yes!</label>
                         <label class="pill"><input type="radio" name="Ready For Plan" value="Not Sure Yet"> Not Sure Yet</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Will you be consistent with follow-ups? <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Consistent Followups">
-                        <label class="pill"><input type="radio" name="Consistent Followups" value="Yes!"> Yes!</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Consistent with follow-ups? <span class="req">*</span></label>
+                    <div class="pills" data-name="Consistent Followups" data-mode="single">
+                        <label class="pill"><input type="radio" name="Consistent Followups" value="Yes!"><span class="pill-emoji">&#x2705;</span> Yes!</label>
                         <label class="pill"><input type="radio" name="Consistent Followups" value="I'll Try"> I'll Try</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
-                <div class="field-group" data-required="pills">
-                    <label>Best time to connect on Sundays? <span class="req">*</span></label>
-                    <div class="pills pills-radio" data-name="Sunday Connect Time">
-                        <label class="pill"><input type="radio" name="Sunday Connect Time" value="Morning (8-11 AM)">&#x1F305; Morning (8-11)</label>
-                        <label class="pill"><input type="radio" name="Sunday Connect Time" value="Afternoon (12-3 PM)">&#x2600;&#xFE0F; Afternoon (12-3)</label>
-                        <label class="pill"><input type="radio" name="Sunday Connect Time" value="Evening (4-6 PM)">&#x1F307; Evening (4-6)</label>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">Best time to connect on Sundays? <span class="req">*</span></label>
+                    <div class="pills" data-name="Sunday Connect Time" data-mode="single">
+                        <label class="pill"><input type="radio" name="Sunday Connect Time" value="Morning (8-11 AM)"><span class="pill-emoji">&#x1F305;</span> Morning</label>
+                        <label class="pill"><input type="radio" name="Sunday Connect Time" value="Afternoon (12-3 PM)"><span class="pill-emoji">&#x2600;&#xFE0F;</span> Afternoon</label>
+                        <label class="pill"><input type="radio" name="Sunday Connect Time" value="Evening (4-6 PM)"><span class="pill-emoji">&#x1F307;</span> Evening</label>
                     </div>
-                    <div class="error-msg">Please select one</div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
                 <div class="step-nav">
-                    <button type="button" class="btn-back" onclick="prevStep(4)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                    <button type="button" class="btn-b" onclick="go(3)">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
                         Back
                     </button>
-                    <button type="submit" class="btn-next btn-submit" id="submitBtn">
-                        <span>Start My Nutrition Journey</span>
+                    <button type="submit" class="btn-n btn-submit" id="subBtn">
+                        <span>Submit Assessment</span>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
                     </button>
                 </div>
             </div>
-        </form>
 
-        <!-- Success Screen -->
-        <div class="success-screen" id="successScreen">
+        </form>
+        </div>
+    </div>
+
+    <!-- Success Screen -->
+    <div class="success" id="successEl">
+        <div class="success-inner">
             <div class="success-check">&#x2705;</div>
-            <h2>Thank you, <span class="success-name" id="successName"></span>!</h2>
-            <p>Your nutrition assessment has been submitted successfully.</p>
-            <p>Kajal will personally review your profile and reach out to you soon.</p>
-            <a href="https://wa.me/919599839979" target="_blank" rel="noopener noreferrer" class="success-whatsapp">
-                &#x1F4F1; WhatsApp: +91-9599839979
+            <h2>Thank you, <span class="sname" id="sNameEl"></span>!</h2>
+            <p>Your assessment has been submitted successfully.</p>
+            <p style="color:var(--gray-600);font-weight:500">Kajal will personally review your profile and connect with you soon.</p>
+            <a href="https://wa.me/919599839979" target="_blank" rel="noopener noreferrer" class="success-wa">
+                &#x1F4F2; Chat on WhatsApp
             </a>
             <br>
-            <a href="index.html" class="success-back">
+            <a href="index.html" class="success-link">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
                 Back to Portfolio
             </a>
         </div>
     </div>
 
-    <script>
-    /* ==========================================
-       ASSESSMENT FORM — Multi-Step Wizard
-       ========================================== */
+</div>
 
-    const TOTAL_STEPS = 4;
-    let currentStep = 1;
-    let selectedGender = '';
+<script>
+let cur = 1, gender = '';
 
-    const stepLabels = {
-        1: 'About You',
-        2: 'Your Health',
-        3: 'Your Lifestyle',
-        4: 'Diet & Final Details'
-    };
-
-    // ========== PILL / CHIP / EMOJI SELECTORS ==========
-
-    // Radio-style pills (single select)
-    document.querySelectorAll('.pills-radio .pill').forEach(pill => {
-        pill.addEventListener('click', () => {
-            const parent = pill.closest('.pills');
-            parent.querySelectorAll('.pill').forEach(p => p.classList.remove('selected'));
-            pill.classList.add('selected');
-            pill.querySelector('input').checked = true;
-            pill.closest('.field-group')?.classList.remove('error');
-
-            // Track gender for conditional section
-            if (pill.querySelector('input[name="Gender"]')) {
-                selectedGender = pill.querySelector('input').value;
-                toggleHormonalSection();
-            }
-        });
+// ===== PILLS (single-select) =====
+document.querySelectorAll('.pills[data-mode="single"] .pill').forEach(p => {
+    p.addEventListener('click', () => {
+        p.closest('.pills').querySelectorAll('.pill').forEach(x => x.classList.remove('sel'));
+        p.classList.add('sel');
+        p.querySelector('input').checked = true;
+        p.closest('.fg')?.classList.remove('err');
+        // Gender tracking
+        const inp = p.querySelector('input[name="Gender"]');
+        if (inp) { gender = inp.value; toggleHorm(); }
     });
+});
 
-    // Multi-select chips
-    document.querySelectorAll('.chips .chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-            const parent = chip.closest('.chips');
-            const isNone = chip.dataset.none === 'true';
-            const hasNone = parent.dataset.hasNone === 'true';
-            const input = chip.querySelector('input');
-
-            if (isNone) {
-                // "None" deselects everything else
-                parent.querySelectorAll('.chip').forEach(c => {
-                    if (c !== chip) { c.classList.remove('selected'); c.querySelector('input').checked = false; }
-                });
-                chip.classList.toggle('selected');
-                input.checked = chip.classList.contains('selected');
-            } else {
-                // Regular chip: deselect "None" if present
-                if (hasNone) {
-                    const noneChip = parent.querySelector('[data-none="true"]');
-                    if (noneChip) { noneChip.classList.remove('selected'); noneChip.querySelector('input').checked = false; }
-                }
-                chip.classList.toggle('selected');
-                input.checked = chip.classList.contains('selected');
-            }
-            chip.closest('.field-group')?.classList.remove('error');
-        });
-    });
-
-    // Emoji scale selectors
-    document.querySelectorAll('.emoji-scale .emoji-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const parent = btn.closest('.emoji-scale');
-            parent.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('selected'));
-            btn.classList.add('selected');
-            btn.querySelector('input').checked = true;
-            btn.closest('.field-group')?.classList.remove('error');
-        });
-    });
-
-    // ========== CONDITIONAL HORMONAL SECTION ==========
-    function toggleHormonalSection() {
-        const section = document.getElementById('hormonalSection');
-        if (selectedGender === 'Female') {
-            section.classList.add('visible');
+// ===== CHIPS (multi-select) =====
+document.querySelectorAll('.chips .chip').forEach(c => {
+    c.addEventListener('click', () => {
+        const parent = c.closest('.chips');
+        const isNone = c.dataset.none === '1';
+        const inp = c.querySelector('input');
+        if (isNone) {
+            parent.querySelectorAll('.chip').forEach(x => {
+                if (x !== c) { x.classList.remove('sel'); x.querySelector('input').checked = false; }
+            });
+            c.classList.toggle('sel'); inp.checked = c.classList.contains('sel');
         } else {
-            section.classList.remove('visible');
-            // Clear hormonal fields
-            section.querySelectorAll('input').forEach(input => {
-                input.checked = false; input.value = input.type === 'radio' || input.type === 'checkbox' ? input.value : '';
-            });
-            section.querySelectorAll('.pill, .chip').forEach(el => el.classList.remove('selected'));
-            section.querySelectorAll('.text-input').forEach(el => el.value = '');
+            const none = parent.querySelector('[data-none="1"]');
+            if (none) { none.classList.remove('sel'); none.querySelector('input').checked = false; }
+            c.classList.toggle('sel'); inp.checked = c.classList.contains('sel');
         }
+        c.closest('.fg')?.classList.remove('err');
+    });
+});
+
+// ===== EMOJI SCALE =====
+document.querySelectorAll('.escale .escale-btn').forEach(b => {
+    b.addEventListener('click', () => {
+        b.closest('.escale').querySelectorAll('.escale-btn').forEach(x => x.classList.remove('sel'));
+        b.classList.add('sel');
+        b.querySelector('input').checked = true;
+        b.closest('.fg')?.classList.remove('err');
+    });
+});
+
+// ===== HORMONAL TOGGLE =====
+function toggleHorm() {
+    const sec = document.getElementById('hormSec');
+    if (gender === 'Female') { sec.classList.add('vis'); }
+    else {
+        sec.classList.remove('vis');
+        sec.querySelectorAll('input[type="radio"],input[type="checkbox"]').forEach(i => i.checked = false);
+        sec.querySelectorAll('.pill,.chip').forEach(e => e.classList.remove('sel'));
+        sec.querySelectorAll('.fi').forEach(e => e.value = '');
     }
+}
 
-    // ========== FILE UPLOAD ==========
-    const fileInput = document.getElementById('fileInput');
-    const fileZone = document.getElementById('fileZone');
-    const fileNameEl = document.getElementById('fileName');
-
-    fileInput?.addEventListener('change', () => {
-        if (fileInput.files.length > 0) {
-            const file = fileInput.files[0];
-            if (file.size > 5 * 1024 * 1024) {
-                fileNameEl.textContent = 'File too large (max 5MB)';
-                fileNameEl.style.color = '#EF4444';
-                fileInput.value = '';
-                fileZone.classList.remove('has-file');
-                return;
-            }
-            fileNameEl.textContent = file.name;
-            fileNameEl.style.color = '';
-            fileZone.classList.add('has-file');
-        } else {
-            fileNameEl.textContent = '';
-            fileZone.classList.remove('has-file');
+// ===== FILE UPLOAD =====
+const fInp = document.getElementById('fInput');
+fInp?.addEventListener('change', () => {
+    const zone = document.getElementById('fZone');
+    const nm = document.getElementById('fName');
+    if (fInp.files.length) {
+        if (fInp.files[0].size > 5*1024*1024) {
+            nm.textContent = 'File too large (max 5MB)'; nm.style.color = '#EF4444';
+            fInp.value = ''; zone.classList.remove('has'); return;
         }
+        nm.textContent = fInp.files[0].name; nm.style.color = '';
+        zone.classList.add('has');
+    } else { nm.textContent = ''; zone.classList.remove('has'); }
+});
+
+// ===== CLEAR ERRORS ON INPUT =====
+document.querySelectorAll('.fi').forEach(i => {
+    i.addEventListener('input', () => i.closest('.fg')?.classList.remove('err'));
+});
+
+// ===== VALIDATION =====
+function validate(n) {
+    const step = document.getElementById('s' + n);
+    const fem = gender === 'Female';
+    let ok = true;
+
+    step.querySelectorAll('[data-req="text"] .fi, [data-req="email"] .fi').forEach(i => {
+        const g = i.closest('.fg'), t = g.dataset.req;
+        let v = i.value.trim() !== '';
+        if (t === 'email') v = v && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(i.value.trim());
+        if (!v) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
     });
 
-    // ========== VALIDATION ==========
-    function validateStep(stepNum) {
-        const step = document.getElementById('step' + stepNum);
-        const isFemale = selectedGender === 'Female';
-        let valid = true;
-
-        // Validate required text/email/tel/number/date/time inputs
-        step.querySelectorAll('[data-required="text"] .text-input, [data-required="email"] .text-input').forEach(input => {
-            const group = input.closest('.field-group');
-            const reqType = group.dataset.required;
-            let fieldValid = input.value.trim() !== '';
-            if (reqType === 'email') fieldValid = fieldValid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-            if (!fieldValid) { group.classList.add('error'); valid = false; }
-            else { group.classList.remove('error'); }
-        });
-
-        // Validate required textareas
-        step.querySelectorAll('[data-required="textarea"] .textarea-input').forEach(input => {
-            const group = input.closest('.field-group');
-            if (input.value.trim() === '') { group.classList.add('error'); valid = false; }
-            else { group.classList.remove('error'); }
-        });
-
-        // Validate required pills (radio)
-        step.querySelectorAll('[data-required="pills"] .pills').forEach(pills => {
-            const group = pills.closest('.field-group');
-            const checked = pills.querySelector('input:checked');
-            if (!checked) { group.classList.add('error'); valid = false; }
-            else { group.classList.remove('error'); }
-        });
-
-        // Validate required chips (multi-select)
-        step.querySelectorAll('[data-required="chips"] .chips').forEach(chips => {
-            const group = chips.closest('.field-group');
-            const checked = chips.querySelector('input:checked');
-            if (!checked) { group.classList.add('error'); valid = false; }
-            else { group.classList.remove('error'); }
-        });
-
-        // Validate emoji scales
-        step.querySelectorAll('[data-required="emoji"] .emoji-scale').forEach(scale => {
-            const group = scale.closest('.field-group');
-            const checked = scale.querySelector('input:checked');
-            if (!checked) { group.classList.add('error'); valid = false; }
-            else { group.classList.remove('error'); }
-        });
-
-        // Validate conditional female fields
-        if (isFemale) {
-            step.querySelectorAll('[data-required-if-female="text"] .text-input').forEach(input => {
-                const group = input.closest('.field-group');
-                if (input.value.trim() === '') { group.classList.add('error'); valid = false; }
-                else { group.classList.remove('error'); }
-            });
-            step.querySelectorAll('[data-required-if-female="pills"] .pills').forEach(pills => {
-                const group = pills.closest('.field-group');
-                if (!pills.querySelector('input:checked')) { group.classList.add('error'); valid = false; }
-                else { group.classList.remove('error'); }
-            });
-            step.querySelectorAll('[data-required-if-female="chips"] .chips').forEach(chips => {
-                const group = chips.closest('.field-group');
-                if (!chips.querySelector('input:checked')) { group.classList.add('error'); valid = false; }
-                else { group.classList.remove('error'); }
-            });
-        }
-
-        // Scroll to first error
-        if (!valid) {
-            const firstError = step.querySelector('.field-group.error');
-            if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        return valid;
-    }
-
-    // ========== STEP NAVIGATION ==========
-    function updateProgress() {
-        const pct = Math.round(((currentStep - 1) / TOTAL_STEPS) * 100);
-        document.getElementById('progressFill').style.width = pct + '%';
-        document.getElementById('progressPct').textContent = pct + '%';
-        document.getElementById('progressStep').innerHTML =
-            'Step ' + currentStep + ' of ' + TOTAL_STEPS + ' &mdash; ' + stepLabels[currentStep];
-    }
-
-    function showStep(num) {
-        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-        const target = document.getElementById('step' + num);
-        if (target) {
-            target.classList.add('active');
-            // Re-trigger animation
-            target.style.animation = 'none';
-            target.offsetHeight; // reflow
-            target.style.animation = '';
-        }
-        currentStep = num;
-        updateProgress();
-        // Hide intro after step 1
-        document.getElementById('introCard').style.display = num > 1 ? 'none' : '';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function nextStep(fromStep) {
-        if (!validateStep(fromStep)) return;
-        showStep(fromStep + 1);
-    }
-
-    function prevStep(fromStep) {
-        showStep(fromStep - 1);
-    }
-
-    // Initialize
-    updateProgress();
-
-    // Remove error state on input
-    document.querySelectorAll('.text-input, .textarea-input').forEach(input => {
-        input.addEventListener('input', () => {
-            input.closest('.field-group')?.classList.remove('error');
-        });
+    step.querySelectorAll('[data-req="textarea"] textarea.fi').forEach(i => {
+        const g = i.closest('.fg');
+        if (!i.value.trim()) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
     });
 
-    // ========== FORM SUBMISSION ==========
-    document.getElementById('assessmentForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        if (!validateStep(4)) return;
-
-        const submitBtn = document.getElementById('submitBtn');
-        const origHTML = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span class="spinner"></span> Submitting...';
-        submitBtn.classList.add('loading');
-
-        const formData = new FormData(this);
-
-        // Collect multi-select chips into comma-separated values
-        document.querySelectorAll('.chips').forEach(chipGroup => {
-            const name = chipGroup.dataset.name;
-            const selected = [];
-            chipGroup.querySelectorAll('input:checked').forEach(input => selected.push(input.value));
-            if (selected.length > 0) {
-                // Remove individual entries and add combined
-                formData.delete(name);
-                formData.append(name, selected.join(', '));
-            }
-        });
-
-        fetch(this.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                // Show success screen
-                const nameInput = document.querySelector('input[name="Full Name"]');
-                document.getElementById('successName').textContent = nameInput ? nameInput.value.split(' ')[0] : 'there';
-
-                document.getElementById('assessmentForm').style.display = 'none';
-                document.getElementById('introCard').style.display = 'none';
-                document.getElementById('successScreen').classList.add('active');
-
-                document.getElementById('progressFill').style.width = '100%';
-                document.getElementById('progressPct').textContent = '100%';
-                document.getElementById('progressStep').innerHTML = 'Completed &#x2705;';
-
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                throw new Error('Submission failed');
-            }
-        })
-        .catch(() => {
-            alert('Something went wrong. Please try again or WhatsApp Kajal directly at +91-9599839979.');
-            submitBtn.innerHTML = origHTML;
-            submitBtn.classList.remove('loading');
-        });
+    step.querySelectorAll('[data-req="pills"] .pills').forEach(p => {
+        const g = p.closest('.fg');
+        if (!p.querySelector('input:checked')) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
     });
 
-    </script>
+    step.querySelectorAll('[data-req="chips"] .chips').forEach(p => {
+        const g = p.closest('.fg');
+        if (!p.querySelector('input:checked')) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
+    });
+
+    step.querySelectorAll('[data-req="emoji"] .escale').forEach(p => {
+        const g = p.closest('.fg');
+        if (!p.querySelector('input:checked')) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
+    });
+
+    // Female-conditional
+    if (fem) {
+        step.querySelectorAll('[data-reqf="text"] .fi').forEach(i => {
+            const g = i.closest('.fg');
+            if (!i.value.trim()) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
+        });
+        step.querySelectorAll('[data-reqf="pills"] .pills').forEach(p => {
+            const g = p.closest('.fg');
+            if (!p.querySelector('input:checked')) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
+        });
+        step.querySelectorAll('[data-reqf="chips"] .chips').forEach(p => {
+            const g = p.closest('.fg');
+            if (!p.querySelector('input:checked')) { g.classList.add('err'); ok = false; } else g.classList.remove('err');
+        });
+    }
+
+    if (!ok) {
+        const first = step.querySelector('.fg.err');
+        if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    return ok;
+}
+
+// ===== STEP INDICATOR UPDATE =====
+function updateIndicator(to, from) {
+    for (let i = 1; i <= 4; i++) {
+        const wrap = document.querySelector(`[data-si="${i}"]`);
+        const dot = wrap.querySelector('.step-dot');
+        wrap.classList.remove('is-active', 'is-done');
+        dot.classList.remove('active', 'done');
+
+        if (i < to) { dot.classList.add('done'); wrap.classList.add('is-done'); }
+        else if (i === to) { dot.classList.add('active'); wrap.classList.add('is-active'); }
+    }
+    // Lines
+    for (let i = 1; i <= 3; i++) {
+        const line = document.querySelector(`[data-sl="${i}"]`);
+        line.classList.toggle('done', i < to);
+    }
+}
+
+// ===== NAVIGATION =====
+function go(to) {
+    // Going forward? Validate current step
+    if (to > cur && !validate(cur)) return;
+
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById('s' + to);
+    target.classList.add('active');
+    // Re-trigger animation
+    target.style.animation = 'none'; target.offsetHeight; target.style.animation = '';
+
+    updateIndicator(to, cur);
+    cur = to;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===== SUBMIT =====
+document.getElementById('aForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate(4)) return;
+
+    const btn = document.getElementById('subBtn');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<span class="spinner"></span> Submitting...';
+    btn.classList.add('loading');
+
+    const fd = new FormData(this);
+
+    // Merge multi-select chips
+    document.querySelectorAll('.chips').forEach(cg => {
+        const name = cg.dataset.name;
+        const vals = [];
+        cg.querySelectorAll('input:checked').forEach(i => vals.push(i.value));
+        if (vals.length) { fd.delete(name); fd.append(name, vals.join(', ')); }
+    });
+
+    fetch(this.action, { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(d => {
+        if (d.success) {
+            const name = document.querySelector('input[name="Full Name"]')?.value?.split(' ')[0] || 'there';
+            document.getElementById('sNameEl').textContent = name;
+            document.querySelector('.form-card').style.display = 'none';
+            document.getElementById('stepIndicator').style.display = 'none';
+            document.getElementById('successEl').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else throw 0;
+    })
+    .catch(() => {
+        alert('Something went wrong. Please try again or WhatsApp Kajal at +91-9599839979.');
+        btn.innerHTML = orig; btn.classList.remove('loading');
+    });
+});
+</script>
 </body>
 </html>
