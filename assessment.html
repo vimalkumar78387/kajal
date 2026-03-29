@@ -51,8 +51,21 @@ html { scroll-behavior: smooth; }
 body {
     font-family: var(--font-b); color: var(--gray-800);
     background: var(--bg);
+    background-image:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(45,106,79,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 85% 10%, rgba(212,165,116,0.07) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 50% at 50% 100%, rgba(45,106,79,0.05) 0%, transparent 50%);
+    background-attachment: fixed;
     min-height: 100vh; min-height: 100dvh;
     line-height: 1.6; -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+body::before {
+    content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image:
+        radial-gradient(circle at 15% 25%, rgba(149,213,178,0.12) 0%, transparent 40%),
+        radial-gradient(circle at 80% 15%, rgba(212,165,116,0.08) 0%, transparent 35%),
+        radial-gradient(circle at 60% 85%, rgba(82,183,136,0.06) 0%, transparent 40%);
 }
 input, select, textarea, button { font-family: inherit; }
 
