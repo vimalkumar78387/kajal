@@ -938,7 +938,8 @@ let cur = 1, gender = '';
 
 // ===== PILLS (single-select) =====
 document.querySelectorAll('.pills[data-mode="single"] .pill').forEach(p => {
-    p.addEventListener('click', () => {
+    p.addEventListener('click', (e) => {
+        e.preventDefault();
         p.closest('.pills').querySelectorAll('.pill').forEach(x => x.classList.remove('sel'));
         p.classList.add('sel');
         p.querySelector('input').checked = true;
@@ -951,7 +952,8 @@ document.querySelectorAll('.pills[data-mode="single"] .pill').forEach(p => {
 
 // ===== CHIPS (multi-select) =====
 document.querySelectorAll('.chips .chip').forEach(c => {
-    c.addEventListener('click', () => {
+    c.addEventListener('click', (e) => {
+        e.preventDefault();
         const parent = c.closest('.chips');
         const isNone = c.dataset.none === '1';
         const inp = c.querySelector('input');
@@ -971,7 +973,8 @@ document.querySelectorAll('.chips .chip').forEach(c => {
 
 // ===== EMOJI SCALE =====
 document.querySelectorAll('.escale .escale-btn').forEach(b => {
-    b.addEventListener('click', () => {
+    b.addEventListener('click', (e) => {
+        e.preventDefault();
         b.closest('.escale').querySelectorAll('.escale-btn').forEach(x => x.classList.remove('sel'));
         b.classList.add('sel');
         b.querySelector('input').checked = true;
