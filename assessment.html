@@ -245,6 +245,11 @@ textarea.fi { resize: vertical; min-height: 60px; line-height: 1.6; }
 }
 .chip input { display: none; }
 
+/* "Other" text input below chips */
+.other-input {
+    animation: fadeSlideUp 0.25s var(--ease-out);
+}
+
 /* ========== EMOJI SCALE ========== */
 .escale { display: flex; gap: 6px; }
 .escale-btn {
@@ -580,7 +585,9 @@ textarea.fi { resize: vertical; min-height: 60px; line-height: 1.6; }
                         <label class="chip"><input type="checkbox" name="Medical Conditions" value="Cholesterol"> Cholesterol</label>
                         <label class="chip"><input type="checkbox" name="Medical Conditions" value="BP Issues"> BP Issues</label>
                         <label class="chip" data-none="1"><input type="checkbox" name="Medical Conditions" value="None">&#x2705; None</label>
+                        <label class="chip" data-other="1"><input type="checkbox" name="Medical Conditions" value="Other">&#x270F;&#xFE0F; Other</label>
                     </div>
+                    <input type="text" name="Medical Conditions (Other)" class="fi other-input" placeholder="Please specify your condition..." style="display:none;margin-top:8px">
                     <div class="err-msg">Select at least one</div>
                 </div>
 
@@ -599,7 +606,9 @@ textarea.fi { resize: vertical; min-height: 60px; line-height: 1.6; }
                         <label class="chip"><input type="checkbox" name="Gut Symptoms" value="Acidity"> Acidity</label>
                         <label class="chip"><input type="checkbox" name="Gut Symptoms" value="Gas"> Gas</label>
                         <label class="chip" data-none="1"><input type="checkbox" name="Gut Symptoms" value="None">&#x2705; None</label>
+                        <label class="chip" data-other="1"><input type="checkbox" name="Gut Symptoms" value="Other">&#x270F;&#xFE0F; Other</label>
                     </div>
+                    <input type="text" name="Gut Symptoms (Other)" class="fi other-input" placeholder="Please specify your symptoms..." style="display:none;margin-top:8px">
                     <div class="err-msg">Select at least one</div>
                 </div>
 
@@ -968,18 +977,35 @@ document.querySelectorAll('.chips .chip').forEach(c => {
         e.preventDefault();
         const parent = c.closest('.chips');
         const isNone = c.dataset.none === '1';
+        const isOther = c.dataset.other === '1';
         const inp = c.querySelector('input');
+        const fg = c.closest('.fg');
+        const otherInput = fg?.querySelector('.other-input');
+
         if (isNone) {
+            // "None" deselects everything including "Other"
             parent.querySelectorAll('.chip').forEach(x => {
                 if (x !== c) { x.classList.remove('sel'); x.querySelector('input').checked = false; }
             });
             c.classList.toggle('sel'); inp.checked = c.classList.contains('sel');
+            if (otherInput) { otherInput.style.display = 'none'; otherInput.value = ''; }
+        } else if (isOther) {
+            // "Other" deselects "None", toggles text input
+            const none = parent.querySelector('[data-none="1"]');
+            if (none) { none.classList.remove('sel'); none.querySelector('input').checked = false; }
+            c.classList.toggle('sel'); inp.checked = c.classList.contains('sel');
+            if (otherInput) {
+                otherInput.style.display = c.classList.contains('sel') ? 'block' : 'none';
+                if (c.classList.contains('sel')) otherInput.focus();
+                else otherInput.value = '';
+            }
         } else {
+            // Regular chip: deselect "None"
             const none = parent.querySelector('[data-none="1"]');
             if (none) { none.classList.remove('sel'); none.querySelector('input').checked = false; }
             c.classList.toggle('sel'); inp.checked = c.classList.contains('sel');
         }
-        c.closest('.fg')?.classList.remove('err');
+        fg?.classList.remove('err');
     });
 });
 
