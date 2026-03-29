@@ -743,17 +743,29 @@ textarea.fi { resize: vertical; min-height: 60px; line-height: 1.6; }
 
                 <div class="sdiv"><span class="sdiv-icon">&#x23F0;</span><span class="sdiv-text">Routine & Diet Basics</span></div>
 
-                <div class="row">
-                    <div class="fg" data-req="text">
-                        <label class="fg-label">Wake up time <span class="req">*</span></label>
-                        <input type="time" name="Wake Up Time" class="fi">
-                        <div class="err-msg">Required</div>
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">&#x1F305; Wake up time <span class="req">*</span></label>
+                    <div class="pills" data-name="Wake Up Time" data-mode="single">
+                        <label class="pill"><input type="radio" name="Wake Up Time" value="Before 5 AM"> Before 5 AM</label>
+                        <label class="pill"><input type="radio" name="Wake Up Time" value="5 - 6 AM"> 5-6 AM</label>
+                        <label class="pill"><input type="radio" name="Wake Up Time" value="6 - 7 AM"> 6-7 AM</label>
+                        <label class="pill"><input type="radio" name="Wake Up Time" value="7 - 8 AM"> 7-8 AM</label>
+                        <label class="pill"><input type="radio" name="Wake Up Time" value="8 - 9 AM"> 8-9 AM</label>
+                        <label class="pill"><input type="radio" name="Wake Up Time" value="After 9 AM"> After 9 AM</label>
                     </div>
-                    <div class="fg" data-req="text">
-                        <label class="fg-label">Sleep time <span class="req">*</span></label>
-                        <input type="time" name="Sleep Time" class="fi">
-                        <div class="err-msg">Required</div>
+                    <div class="err-msg">Please select one</div>
+                </div>
+
+                <div class="fg" data-req="pills">
+                    <label class="fg-label">&#x1F31B; Sleep time <span class="req">*</span></label>
+                    <div class="pills" data-name="Sleep Time" data-mode="single">
+                        <label class="pill"><input type="radio" name="Sleep Time" value="Before 9 PM"> Before 9 PM</label>
+                        <label class="pill"><input type="radio" name="Sleep Time" value="9 - 10 PM"> 9-10 PM</label>
+                        <label class="pill"><input type="radio" name="Sleep Time" value="10 - 11 PM"> 10-11 PM</label>
+                        <label class="pill"><input type="radio" name="Sleep Time" value="11 PM - 12 AM"> 11-12 AM</label>
+                        <label class="pill"><input type="radio" name="Sleep Time" value="After 12 AM"> After 12 AM</label>
                     </div>
+                    <div class="err-msg">Please select one</div>
                 </div>
 
                 <div class="fg" data-req="pills">
